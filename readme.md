@@ -19,7 +19,7 @@ We provide here the source code at the base of the analysis described in our wor
 
 #### Content
 ```
-file2000res.npy                 Two experimental data traces
+file2000res.npy.7z              Two experimental data traces
 Drag/DragRotatingBead.py        Scripts to calculate the drag coefficient of
 Drag/DragTranslationBead.py  	    a rotating and translating sphere
 filters.py                      Signal processing, filtering, smoothing

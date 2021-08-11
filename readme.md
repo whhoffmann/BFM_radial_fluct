@@ -17,7 +17,7 @@ Preprint : <https://arxiv.org/abs/2106.15435>
 We provide here the source code at the base of the analysis described in our work. Two example experimental traces are also provided to test the output of the code.
 
 
-#### Content
+#### Content
 ```
 file2000res.npy                 Two experimental data traces
 Drag/DragRotatingBead.py        Scripts to calculate the drag coefficient of

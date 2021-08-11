@@ -11,8 +11,8 @@ Contact: francesco.pedaci -AT- cbs.cnrs.fr
 Preprint : <https://arxiv.org/abs/2106.15435>
 
 
-## Software overview
 
+## Software overview
 
 We provide here the source code at the base of the analysis described in our work. Two example experimental traces are also provided to test the output of the code.
 
@@ -110,10 +110,51 @@ For the 1st file, the command above will produce in few minutes the plots shown 
 
 <img src="./xy_fluctuations_theta_0.png" width="400" />
 
-
-<img src="./xy_fluctuations_theta_1.png" width="500" />
+The x,y trace is divided in contiguous windows of `win_s=3` seconds. The panels show all the windows in the trace, shown in different colors.  
+**subplot(221)** : `x,y` trajectory  
+**subplot(222)** : angular speed of the bead in time  
+**subplot(223)** : radial distance (meters) in time  
+**subplot(224)** : angle phi (radians) in time
 
 
 <img src="./xy_fluctuations_theta_2.png" width="500" />
 
+Analysis in each window along the trace.
+
+**subplot(331)** : all x,y points of the trace  
+**subplot(332)** : bending stiffness EI calculated in each window, from the Gaussian fit (red), raw signal (yellow), and Loretzian fit (green), as described in the SI.  
+**subplot(333)** : Corner frequency obtained from the Lorentzian fit of the PSD.  
+**subplot(334)** : Relative drag coefficient in each window. Red points: values obtained from the Lorentzian fit of the PSD of theta. Blue points: theoretical value obtained imposing the parameter `offset=80e-9 (meters)`. The best value of offset is automatically determined by the optimization procedure described in the main text and SI.  
+**subplot(335)** : standard deviation of theta in each window, obtained from the raw signal (yellow), Lorentzian fit (green), and Gaussian fit (red).  
+**subplot(336)** : Stiffness of the potential for the angle theta, calculated from the equipartition theorem and the variance of the data (KT/var(thetavar_sig_arr), yellow points), from the variance of the Gaussian fit (`KT/theta_stds_gaus**2`, red points), and from the Lorentzian fit (`gamma_loren_f2_pts*freq_c*2*np.pi`, green points)  
+**subplot(337)** : mean angle theta  
+**subplot(338)**, subplot(339) : Mean Square Error of the Lorentzian and Gaussian fit, respectively.
+
+
+<img src="./xy_fluctuations_theta_1.png" width="500" />
+
+Analysis as a function of median speed in each time window.
+
+**subplot(331)** : Angular speed omega in time, where the time windows are highlighted by colors. Black dots indicate the median speed value in each window.  
+**subplot(332)** : Same as subplot(332) in the previous figure, here `EI` is plot as a function of speed in the time window.  
+**subplot(333)** : Same as subplot(333) in the previous figure, `f_c` is plot as a function of speed in the time window.  
+**subplot(334)** : Same as subplot(334) in the previous figure, the drag is plot as a function of speed in the time window.  
+**subplot(335)** : Same as subplot(335) in the previous figure, the std.dev. of theta is plot as a function of speed in the time window.  
+**subplot(336)** : Same as subplot(336) in the previous figure, the MSE is plot as a function of speed in the time window.  
+**subplot(337)** : Same as subplot(337) in the previous figure, the mean angle theta is plot as a function of speed in the time window.  
+**subplot(338)** : Probability distributions of the angle theta (rad) in each window.
+**subplot(339)** : Same as subplot(339) in the previous figure, the MSE is plot as a function of speed in the time window.
+
+<img src="./xy_fluctuations_theta_3.png" width="500" />
+
+As for fig.3 of the main text, this figure recapitulates the main analysis shown before.
+
+**a)** Speed omega in time. The three windows at different speeds highlighted by color correspond to the points marked in each plot of the figure.  
+**b)** Resulting values of the bending stiffness EI (see previous figures).  
+**c1)** Distribution of the measured angle theta in each window.  
+**c2)** Mean of the angle theta in each window as a function of angular speed.  
+**c3)** Standard deviation of theta in each window as a function of angular speed.  
+**d1)** PSD_theta in each windows, the Lorentzian fit (dashed lines) is shown for the three highlighted windows.  
+**d2)** Corner frequency of the Lorentzian fit in d1, as a function of angular speed.  
+**d3)** Relative drag coefficient measured, as a function of angular speed.  
 

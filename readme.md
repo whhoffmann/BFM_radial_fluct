@@ -142,7 +142,7 @@ Analysis as a function of median speed in each time window.
 **subplot(335)** : Same as subplot(335) in the previous figure, the std.dev. of theta is plot as a function of speed in the time window.  
 **subplot(336)** : Same as subplot(336) in the previous figure, the MSE is plot as a function of speed in the time window.  
 **subplot(337)** : Same as subplot(337) in the previous figure, the mean angle theta is plot as a function of speed in the time window.  
-**subplot(338)** : Probability distributions of the angle theta (rad) in each window.
+**subplot(338)** : Probability distributions of the angle theta (rad) in each window.  
 **subplot(339)** : Same as subplot(339) in the previous figure, the MSE is plot as a function of speed in the time window.
 
 <img src="./xy_fluctuations_theta_3.png" width="500" />

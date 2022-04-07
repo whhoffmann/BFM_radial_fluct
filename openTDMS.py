@@ -121,7 +121,8 @@ def tdms_Trckd_to_pydic(path='', filelist=[], excludefiles=[], inspect=True, inc
             # update dout:
             dout[k]['x'] = x[i]
             dout[k]['y'] = y[i]
-            dout[k]['z'] = z[i]
+            if len(z) != 0:
+                dout[k]['z'] = z[i]
             dout[k]['cellnum'] = cellnum
             dout[k]['FPS'] = FPS
             dout[k]['stator'] = stator

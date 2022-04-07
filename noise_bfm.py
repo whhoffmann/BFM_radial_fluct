@@ -133,18 +133,22 @@ class BFMnoise():
         if plots:
             speed_f_time_sec = np.arange(len(self.speed_Hz_f))/self.FPS
             plt.figure('make_speed', clear=True)
-            plt.subplot(311)
+            #plt.subplot(311)
             plt.plot(self.x[c0:c1:30], self.y[c0:c1:30], ',')
-            plt.axis('image')
-            plt.subplot(312)
+            #plt.axis('image')
+            plt.show()
+            #plt.subplot(312)
             #plt.plot(speed_f_time_sec, self.speed_Hz_f, label=f'filter_win:{self.filter_win}')
+            plt.figure()
             plt.plot(self.speed_Hz_f, label=f'filter_win:{self.filter_win}')
             plt.legend()
             plt.ylabel('speed_Hz_f')
-            plt.subplot(313)
+            plt.show()
+            #plt.subplot(313)
             plt.plot(self.xyspeed_ums_f, label=f'filter_win:{self.filter_win}')
             plt.legend()
             plt.ylabel('xyspeed_ums_f')
+            plt.show()
 
 
 
